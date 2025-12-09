@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhart Pashudhan</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="shortcut icon" href="static/img/icon.png" type="image/png">
+</head>
+<body >
+    <div class="header">
+        <div class="logo">
+            <a href="/"><img src="static/img/nddb-logo.png" alt="nddb logo"></a>
+            <a href="/"><img src="static/img/dahd-logo.png" alt="nddb logo"></a>
+        </div>
+        
+        <div class="navigation">
+            <a href="/">Home</a>
+            <a href="/contact">Contact us</a>
+            {% if status=="Login" %}
+                <a href="/login">{{ status }}</a>
+            {% else %}
+                <a href="/logout">{{ status }}</a>
+            {% endif %}
+        </div>
+    </div>
+
+    {%block content%}
+    
+    {%endblock%}
+
+</body>
+</html>

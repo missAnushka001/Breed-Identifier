@@ -1,0 +1,11 @@
+{%extends 'layout.html' %}
+{% block content%}
+    <div class="identifydiv">
+        <form action="/identifyanimal" enctype="multipart/form-data" method="post" >
+            <input type="file" name="image" accept="image/*">
+            <button type="submit">Upload</button>
+            <h1>{{breed}}</h1>
+        </form>
+    </div>
+    
+{%endblock%}
